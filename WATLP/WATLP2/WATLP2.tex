@@ -1,0 +1,379 @@
+\documentclass[12pt]{article}
+% \usepackage[margin=0.5in]{geometry}
+\usepackage[top=2cm, left=3cm, right=3cm]{geometry}
+% \usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{libertine}
+% \usepackage{times}
+\usepackage{calc}
+\usepackage{eso-pic}
+\usepackage{titlesec}
+\usepackage{soul}
+% \usepackage{array}
+\usepackage{makecell}
+\usepackage{graphicx}
+% \usepackage{tikz-uml}
+% \usepackage{pgfgantt}
+\usepackage{listings}
+\usepackage{color}
+% \usepackage{ulem}
+% \usepackage{lettrine}
+\usepackage{hyperref}
+\usepackage{href-ul}
+\usepackage{tabularx}
+\usepackage{mdframed}
+
+\input{~/Dev/latex/_lib/javascript.tex}
+
+\title{Practical 2}
+\author{Vikas Foolchand Kushwaha}
+\date{}
+
+\newlength{\PageFrameTopMargin}
+\newlength{\PageFrameBottomMargin}
+\newlength{\PageFrameLeftMargin}
+\newlength{\PageFrameRightMargin}
+
+\setlength{\PageFrameTopMargin}{1cm}
+\setlength{\PageFrameBottomMargin}{1cm}
+\setlength{\PageFrameLeftMargin}{1cm}
+\setlength{\PageFrameRightMargin}{1cm}
+
+\makeatletter
+
+\let\inserttitle\@title
+\let\insertauthor\@author
+\let\insertdate\@date
+
+\newlength{\Page@FrameHeight}
+\newlength{\Page@FrameWidth}
+
+\AddToShipoutPicture {
+	\thicklines
+	\setlength{\Page@FrameHeight}{\paperheight-\PageFrameTopMargin-\PageFrameBottomMargin}
+	\setlength{\Page@FrameWidth}{\paperwidth-\PageFrameLeftMargin-\PageFrameRightMargin}
+	\put(\strip@pt\PageFrameLeftMargin,\strip@pt\PageFrameTopMargin){
+		\framebox(\strip@pt\Page@FrameWidth, \strip@pt\Page@FrameHeight){}}}
+
+\makeatother
+
+\hypersetup{
+  pageanchor,
+  colorlinks=true,
+  linkcolor=teal,
+  filecolor=magenta,
+  urlcolor=red,
+  % allbordercolors={0 0 0},
+  % pdfborderstyle={/S/U/W 1},
+  pdftitle={\inserttitle},
+}
+
+\titleformat{\section}
+{\LARGE\bfseries\scshape\center}
+{}
+{0em}
+{}
+
+\titlespacing*{\section}
+{0pt}{2cm}{0.5cm}
+
+\titleformat{\subsection}
+{\Large\bfseries}
+{}
+{0em}
+{}
+
+\titlespacing*{\subsection}
+{0pt}{1.5cm}{0.5cm}
+
+\titleformat{\subsubsection}
+{\large\bfseries}
+{}
+{0em}
+{}
+
+\titlespacing*{\subsubsection}
+{0pt}{1cm}{0.5cm}
+
+\newenvironment{code}{
+  \begin{mdframed}
+  % \begin{lstlisting}[language=Python]
+}{
+  % \end{lstlisting}
+  \end{mdframed}
+}
+
+\newcommand\source[1]{
+  \textbf{\textul{#1}}
+  \lstinputlisting{code/#1}
+}
+
+\newcommand\img[2]{
+  \textbf{\textul{\MakeUppercase{#1} #2}} \\
+  \includegraphics[width=\linewidth]{images/#1#2.png}
+}
+
+\newcommand\ruler{
+  \vspace{1cm}
+  \hrule
+  \vspace{0.5cm}
+}
+
+\begin{document}
+
+\setcounter{page}{0}
+
+\begin{center}
+\hspace{0pt}
+\vfill
+
+\large
+\renewcommand{\arraystretch}{1.4}
+\renewcommand{\cellalign}{lt}
+\renewcommand{\theadalign}{lt}
+
+\begin{tabularx}{\textwidth}{|
+  >{\raggedright\arraybackslash}X|
+  >{\raggedright\arraybackslash}X|
+  >{\raggedright\arraybackslash}X|
+  >{\raggedright\arraybackslash}X|
+}
+\hline
+
+\multicolumn{4}{|l|}{\makecell{
+  \textbf{Name of Student :} \\
+  \MakeUppercase{\insertauthor} \\
+  \newline
+}} \\
+\hline
+
+\multicolumn{2}{|l|}{\makecell{
+  \textbf{Roll Number :} \\
+  29/B \\
+  \newline
+}} &
+\multicolumn{2}{l|}{\makecell{
+  \textbf{Lab Practical Number :} \\
+  02 \\
+  \newline
+}} \\
+\hline
+
+\multicolumn{4}{|l|}{\makecell {
+  \textbf{Title of LAB Practical :} \\
+  Implementation of node.js modules \\
+  \newline
+}} \\
+\hline
+
+\multicolumn{2}{|l|}{\makecell{
+  \textbf{DOP :} \\
+  27/09/2026 \\
+  \newline
+}} &
+\multicolumn{2}{l|}{\makecell{
+  \textbf{DOS :} \\
+  05/10/2026 \\
+  \newline
+}} \\
+\hline
+
+\makecell {
+  \textbf{CO Mapped :} \\
+  CO1 \\
+  \newline
+} &
+\makecell {
+  \textbf{PO Mapped:} \\
+  PO3, PO5, \\
+  PSO1, PSO2 \\
+  \newline
+} &
+\makecell {
+  \textbf{Faculty} \\
+  \textbf{Signature:} \\
+  \newline \\
+  \newline \\
+  \newline
+} &
+\makecell{\textbf{Marks :}}
+\\
+\hline
+
+\end{tabularx}
+
+\vfill
+\hspace{0pt}
+\end{center}
+\thispagestyle{empty}
+
+\clearpage
+\thispagestyle{empty}
+
+
+\section{Aim}
+\centerline{\Large{Implementation of Node.js modules}}
+\vspace{2cm}
+
+
+\section{Description}
+
+\begin{mdframed}
+
+\subsection{Node.js Modules}
+In Node.js, modules are reusable blocks of code that can be imported into other files to provide functionality. Modules help keep your code organized, maintainable, and modular. Node.js has a built-in module system that allows you to create your own custom modules.
+
+\subsubsection{Types of Modules in Node.js}
+
+\begin{enumerate}
+
+\item \textbf{\textul{Built-in Modules}} \\
+  Node.js comes with many core modules that are available without any additional
+  installation. You can use these modules to perform common tasks such as working with
+  the file system, networking, or working with HTTP requests.
+  \begin{code}
+    const moduleName = require('module-name');
+    //Importing Built-in Modules
+  \end{code}
+  \textbf{Common Built-In Modules :}
+
+  \begin{enumerate}
+
+  \item \textbf{\textul{fs} (File System Module)} - Used for working with the file system (reading, writing, updating files).
+    \begin{code}
+      const fs = require('fs');
+    \end{code}
+
+  \item \textbf{\textul{http} (HTTP Module)} - Used for creating HTTP servers and making HTTP requests.
+    \begin{code}
+      const http = require('http');
+    \end{code}
+
+  \item \textbf{\textul{path} (Path Module)} - Used for handling and manipulating file paths.
+    \begin{code}
+      const path = require('path');
+    \end{code}
+
+  \item \textbf{\textul{os} (Operating System Module)} - Provides information about the operating
+system.
+    \begin{code}
+    const os = require('os');
+    \end{code}
+
+  \item \textbf{\textul{events} (Event Module)} - Used for handling events and creating event-driven applications.
+    \begin{code}
+      const EventEmitter = require('events');
+    \end{code}
+
+  \item \textbf{\textul{util} (Utility Module)} - Provides utility functions for handling things like formatting strings, debugging, etc.
+    \begin{code}
+      const util = require('util');
+    \end{code}
+
+  \end{enumerate}
+
+\vspace{0.5cm}
+\item \textbf{\textul{Third-Party Modules}} \\
+  These are modules that you install via \textul{npm} (Node Package Manager). There are thousands of third-party modules available, which extend the functionality of Node.js.
+
+  \begin{enumerate}
+
+  \item To install a module, run the following command in your terminal:
+    \begin{code}
+      npm install <module-name>
+    \end{code}
+
+  \item To import the module after installation:
+    \begin{code}
+      const moduleName = require('module-name');
+    \end{code}
+
+  \end{enumerate}
+
+  Examples of Common Third-Party Modules:
+
+  \begin{enumerate}
+  \item Express - A web application framework for building APIs and web applications.
+    \begin{code}
+      // npm install express \\
+      const express = require('express');
+    \end{code}
+
+  \item Axios - A promise-based HTTP client for making requests to REST APIs.
+    \begin{code}
+      // npm install axios \\
+      const axios = require('axios');
+    \end{code}
+
+  \item Mongoose - An Object Data Modeling (ODM) library for MongoDB.
+    \begin{code}
+      // npm install mongoose \\
+      const mongoose = require('mongoose');
+    \end{code}
+    
+  \end{enumerate}
+
+\vspace{0.5cm}
+\item \textbf{\textul{Custom Modules}} \\
+  These are modules that you create yourself for specific functionality. You can export functions or objects from custom modules and use them in other parts of your application. \\
+  Syntax for Creating and Using Custom Modules:
+  \begin{code}
+    module.exports = functionNameOrObject;
+  \end{code}
+  Import your custom module:
+  \begin{code}
+    const customModule = require('./path-to-module');
+  \end{code}
+
+\end{enumerate}
+
+\vspace{1cm}
+\end{mdframed}
+
+
+\section{Code}
+
+\subsection{Question 1}
+Write a program to print information about the operating system using the OS module. Use any 5 methods of it.
+\bigskip \\
+\source{os-info.js}
+
+\subsection{Question 2}
+Print  "Hello" every 500 milliseconds using the Timer Module. The message should be printed exactly 10 times. Use setInterval, clearInterval and setTimeout methods.
+\bigskip \\
+\source{timer-demo.js} 
+
+\subsection{Question 3}
+Create a Calculator Module in Node.js with functions add, subtract, multiply and divide and call them from another Node.js file.
+\bigskip \\
+\source{calculator.js}
+\bigskip
+\source{calculator-demo.js}
+
+\subsection{Question 4}
+Create a circle module having functions to calculate the area and perimeter of a circle.
+\bigskip \\
+\source{circle.js}
+\bigskip
+\source{circle-demo.js}                                                             
+
+\section{Output}
+
+\img{output}{1}
+\img{output}{2}
+\img{output}{3}
+\img{output}{4}
+
+\section{Conclusion}
+\begin{enumerate}
+  \item \textbf{OS Module:} We used the built-in os module to print important system information like the OS type, hostname, uptime, release version, and CPU architecture. This demonstrates the simplicity of gathering system details with Node.js built-in modules.
+
+  \item \textbf{Timer Module:} We successfully used setInterval() to print "Hello" every 500 milliseconds, combined with setTimeout() and clearInterval() to stop the interval after 10 prints. This showcases how to handle repeated tasks and control their execution timing in Node.js.
+
+  \item \textbf{Calculator Module:} We created a custom Calculator module with functions for basic arithmetic operations like addition, subtraction, multiplication, and division. This demonstrated reusability and extensibility of code across different parts of the application.
+
+  \item \textbf{Circle Module:} The Circle module was created to calculate the area and perimeter of a circle. This reinforced the concept and practice of creating modules for code reusability and extensibility.
+
+\end{enumerate}
+
+\end{document}
