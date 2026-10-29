@@ -1,0 +1,17 @@
+1. To merge two list and find second largest element in the list using bubble sort
+
+2. To calculate the no of uppercase ,lowercase letters and digits in a string.
+
+3. To count the occurrences of each word in a given string sentence.
+
+4. To add key value pair to the dictionary and search and then delete the given key from the dictionary.
+
+5. Create one dictionary of 5 students with their name, address, age, class and marks of 5 subjects. Perform all the operations on the created dictionary.
+
+6. To concatenate two dictionaries and find sum of all values in dictionary.
+
+7. To add and remove elements from set and perform all the set operations like Union, Intersection, Difference and Symmetric Difference.
+
+8. Perform different operations on Tuple.
+
+9. Write a Python program to count the elements in a list until an element is a tuple.

@@ -1,0 +1,16 @@
+<h1>Angular Directives and Pipes Demo</h1>
+
+<h3>Using &#64;if Directive:</h3>
+@if (showMessage) {
+  <div>This message is conditionally displayed using &#64;if directive!</div>
+}
+<h3>Using &#64;for Directive:</h3>
+<ul>
+  @for (member of members; track member) {
+    <li>{{ member }}</li>
+  }
+</ul>
+<h3>Using Built-in Date Pipe:</h3>
+    <p>{{ currentDate | date:'fullDate' }}</p>
+<h3>Using Custom Pipe:</h3>
+<p>{{ message | uppercase }}</p>

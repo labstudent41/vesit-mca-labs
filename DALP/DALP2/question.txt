@@ -1,0 +1,40 @@
+Write code for the following in R:
+
+Data acquisition
+Install packages
+Loading packages 
+Data types
+checking type of variable
+
+Printing variable and objects:
+- Vector
+- Matrix
+- List
+- Factor
+- Data frame
+- Table
+
+cbind-ing and rbind-ing
+Reading and Writing data.
+
+setwd()
+getwd()
+data()
+rm()
+
+Attaching and Detaching data.
+Reading data from the console.
+Loading data from different data sources. (CSV, Excel)
+
+---
+
+1. Install packages
+2. Load packages
+3. Data types and checking variable types
+4. Create and print common objects
+5. Combine data by columns or rows
+6. Working directory
+7. Built-in datasets
+8. Remove objects
+9. Attach and detach data
+

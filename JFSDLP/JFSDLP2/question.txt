@@ -1,0 +1,17 @@
+1. Write a JSP program to read and display query parameters like name, gender and age that are sent through the URL. 
+
+2. Write a Program using JSP to generate prime numbers between 1-100 using a method declared in the declaration tag jsp.
+
+3. Generate and display a random number using the expression tag.
+
+4. Write a Program in JSP to calculate area and circumference of a circle using scriptlets.
+
+5. Write a JSP program that redirects user on another page based on a condition (e.g. Age above 18.) using the response object.
+
+6. Write a JSP program to display servlet configuration parameters using the config object.  
+
+7. Write a JSP program to display employee details and display it in the web page.
+
+8. Write a JSP program to demonstrate the use of JSP forward, useBean, setProperty and getProperty action tag.
+
+9. Create a JSP registration form and store the same in the database.

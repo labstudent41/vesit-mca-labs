@@ -1,0 +1,18 @@
+Implement the following Data preprocessing techniques : 
+
+Naming and Renaming variables, adding a new variable
+Dealing with missing data
+Dealing with categorical data
+Data reduction using subsetting
+
+
+---
+
+1. Installing and loading necessary packages
+2. Declaring sample data set
+
+3. Naming, renaming and adding variables
+4. Dealing with missing data
+5. Dealing with categorical data
+6. Data reduction using subsetting
+
